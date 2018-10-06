@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './rightPanel.css';
+import Button from '../@components/@button/button';;
 
 class FlightItem extends Component {
   render() {
@@ -19,13 +20,13 @@ class FlightItem extends Component {
          arrive_date: returnTripArriveDate
         }
       } = singleFlightData;
-    console.log('singleFlightData', singleFlightData);
   
 
     return (
       <div className="singleFlightContainer">
         <div className="price">{price}</div>
         <table>
+          <tbody>
           <tr>
             <td>{number}</td>
             <td>{returnTripNumber}</td>
@@ -42,7 +43,9 @@ class FlightItem extends Component {
             <td>Arrive: {new Date(arrive_date).toLocaleString()}</td>
             <td>Arrive: {new Date(returnTripArriveDate).toLocaleString()}</td>
           </tr>
+          </tbody>
         </table>
+        <Button>Book this flight</Button>
       </div>
     );
   }
