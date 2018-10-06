@@ -1,2 +1,0 @@
-# flightSearchFunctionality
-thoughtworks assignment 
