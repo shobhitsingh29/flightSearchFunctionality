@@ -2,3 +2,20 @@
 	width: 65%;
 	border:1px solid black;
 }
+
+.singleFlightContainer{
+	border: 1px solid grey;
+	padding: 1rem;
+}
+
+.singleFlightContainer{
+	text-align: left;
+}
+
+.price{
+	font-weight: bold;
+}
+
+tr,td{
+	padding: 0.5rem;
+}

@@ -8,9 +8,9 @@ class FlightListing extends Component {
     const {FLIGHTS} = this.props;
     return (
         <div className="flightListContainer">
-        {/*  {FLIGHTS.map((value, index) => {
-            <FlightItem singleFlightData={value} />
-          })}*/}
+        {FLIGHTS.map((value, index) => {
+           return <FlightItem singleFlightData={value} key={index}/>
+        })}
         </div>
     );
   }
