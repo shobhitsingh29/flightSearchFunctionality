@@ -6,7 +6,7 @@ import RightPanel from './rightPanel/rightPanel.jsx';
 class App extends Component {
   constructor() {
     super();
-    this.state={
+    this.state = {
       price: {
         min: 0,
         max: 10000,
@@ -31,9 +31,10 @@ class App extends Component {
           },
         });
   };
-
   search = () => {
-    alert();
+
+console.log("state",this.state);
+
   };
 
   render() {
@@ -42,6 +43,7 @@ class App extends Component {
       handleRangeChange: this.handleRangeChange,
       search: this.search,
     };
+
     return (
       <div className="App">
         <div className="container">
