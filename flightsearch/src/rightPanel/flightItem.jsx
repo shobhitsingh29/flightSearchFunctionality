@@ -3,9 +3,13 @@ import './rightPanel.css';
 import Button from '../@components/@button/button';;
 
 class FlightItem extends Component {
+
+  abc = () => {
+    console.log();
+  }
   render() {
 
-  	const {singleFlightData} = this.props;
+  	const {singleFlightData, flightIndex, bookedFlightIndex, handleFlightBooking} = this.props;
     const {price,
      number,
       from_code,
@@ -45,7 +49,7 @@ class FlightItem extends Component {
           </tr>
           </tbody>
         </table>
-        <Button>Book this flight</Button>
+        {flightIndex === bookedFlightIndex ? <Button>Booked</Button>: <Button onClick={handleFlightBooking(flightIndex)}>Book this flight</Button>}
       </div>
     );
   }

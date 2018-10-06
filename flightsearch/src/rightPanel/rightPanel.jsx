@@ -5,11 +5,11 @@ import FlightListing from './flightListing.jsx';
 
 class RightPanel extends Component {
   render() {
-  	console.log('flightsData', FLIGHTS);
+  	const {bookedFlightIndex, handleFlightBooking} = this.props;
     return (
       <div className="rightPanelContainer">
-        Right panel
-        <FlightListing FLIGHTS={FLIGHTS}/>
+        <h3 className="allFlightsTag">All Flights</h3>
+        <FlightListing FLIGHTS={FLIGHTS} bookedFlightIndex={bookedFlightIndex} handleFlightBooking={handleFlightBooking}/>
       </div>
     );
   }

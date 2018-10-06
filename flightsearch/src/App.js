@@ -6,14 +6,24 @@ import RightPanel from './rightPanel/rightPanel.jsx';
 class App extends Component {
   constructor(){
     super();
-    this.state={};
+    this.state={
+      bookedFlightIndex: ''
+    };
   }
+
+  handleFlightBooking = index => () => {
+    this.setState({
+      bookedFlightIndex: index
+    })
+  }
+
   render() {
+    const {bookedFlightIndex} = this.state;
     return (
       <div className="App">
         <div className="container">
           <LeftPanel state={this.state}/>
-          <RightPanel state={this.state} />
+          <RightPanel bookedFlightIndex={bookedFlightIndex} handleFlightBooking={this.handleFlightBooking} />
         </div>
       </div>
     );
