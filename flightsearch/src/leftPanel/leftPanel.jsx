@@ -6,7 +6,8 @@ class LeftPanel extends Component {
   render() {
     return (
       <div >
-        <Button value="oneway"></Button>
+        <Button >Oneway</Button>
+        <Button >Return</Button>
       </div>
     );
   }
