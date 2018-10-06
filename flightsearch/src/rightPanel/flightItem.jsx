@@ -3,11 +3,10 @@ import './rightPanel.css';
 
 class FlightListing extends Component {
   render() {
-  	const {singleFlightData} = this.props;
-    console.log('singleFlightData', singleFlightData);
+  //	const {singleFlightData} = this.props;
+   // console.log('singleFlightData', singleFlightData);
     return (
-      <div className="singleFlightContainer">
-
+      <div className="singleFlightContainer">d
       </div>
     );
   }
