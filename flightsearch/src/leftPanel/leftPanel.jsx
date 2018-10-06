@@ -8,19 +8,8 @@ import './leftPanel.css';
 
 class LeftPanel extends Component {
 
-  constructor(props) {
-    super(props);
-    /*
-    this.state = {
-      value: 0
-    }*/
-  }
-
-
-
   render() {
 
-    console.log("ststae",this.props.state);
     const {price: {min, max, value}} = this.props.state;
     const {actions: {handleRangeChange,search}} = this.props;
 
@@ -34,7 +23,7 @@ class LeftPanel extends Component {
             <InputBox placeholder="origin" id="origin"></InputBox>
             <InputBox placeholder="destination" id="destination"></InputBox>
           </div>
-          <div>
+            <div>
             origin Date <DatePicker></DatePicker>
             destination Date <DatePicker></DatePicker>
           </div>
