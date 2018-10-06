@@ -1,12 +1,17 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import LeftPanel from './leftPanel/leftPanel.jsx';
 import RightPanel from './rightPanel/rightPanel.jsx';
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state={
+      price: {
+        min: 0,
+        max: 10000,
+        value: '',
+      },
       bookedFlightIndex: ''
     };
   }
@@ -17,12 +22,30 @@ class App extends Component {
     })
   }
 
+  handleRangeChange = (event) => {
+    this.setState(
+        {
+          price: {
+            ...this.state.price,
+            value: event.target.value,
+          },
+        });
+  };
+
+  search = () => {
+    alert();
+  };
+
   render() {
     const {bookedFlightIndex} = this.state;
+    const actions = {
+      handleRangeChange: this.handleRangeChange,
+      search: this.search,
+    };
     return (
       <div className="App">
         <div className="container">
-          <LeftPanel state={this.state}/>
+          <LeftPanel state={this.state} actions={actions}/>
           <RightPanel bookedFlightIndex={bookedFlightIndex} handleFlightBooking={this.handleFlightBooking} />
         </div>
       </div>

@@ -4,7 +4,11 @@ import './InputBox.scss';
 class InputBox extends Component {
   render() {
     return (
-        <input type="text" placeholder={this.props.placeholder}/>
+
+          <div className="group">
+            <input type="text" id={this.props.id} required="required"/>
+            <label htmlFor={this.props.id}>{this.props.placeholder}</label>
+        </div>
     );
   }
 }
