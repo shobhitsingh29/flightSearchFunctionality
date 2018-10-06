@@ -4,13 +4,12 @@ import LeftPanel from './leftPanel/leftPanel.jsx';
 import RightPanel from './rightPanel/rightPanel.jsx';
 import FLIGHTS from './assets/flightData/flight.js';
 
-
 class App extends Component {
   constructor() {
     super();
-    this.filteredFlights=FLIGHTS;
 
     this.state = {
+      filteredFlights:FLIGHTS,
       price: {
         min: 0,
         max: 10000,
@@ -23,9 +22,9 @@ class App extends Component {
 
   handleFlightBooking = index => () => {
     this.setState({
-      bookedFlightIndex: index
-    })
-  }
+      bookedFlightIndex: index,
+    });
+  };
 
   handleRangeChange = (event) => {
     this.setState(
@@ -37,17 +36,33 @@ class App extends Component {
         });
   };
   search = () => {
-this.filteredFlights=this.filteredFlights.filter((val,key)=>{
+
+
+    const flt= FLIGHTS.filter((val, key) => {
 
 
 
+      if(val.price<this.state.price.value){
 
 
-})
+        return val;
 
 
+      }
+    });
+
+
+
+    this.setState(
+          {
+              filteredFlights:flt,
+          });
+
+    console.log("filteredFlights1",this.state.filteredFlights)
+    console.log("prc",this.state.price.value)
 
   };
+
 
   render() {
     const {bookedFlightIndex, bookedIds} = this.state;
@@ -63,10 +78,10 @@ this.filteredFlights=this.filteredFlights.filter((val,key)=>{
           <LeftPanel
               state={this.state}
               actions={actions}/>
-          <RightPanel 
-          filteredFlights={this.filteredFlights}
-           bookedFlightIndex={bookedFlightIndex} 
-           handleFlightBooking={this.handleFlightBooking} 
+          <RightPanel
+           filteredFlights={this.state.filteredFlights}
+           bookedFlightIndex={bookedFlightIndex}
+           handleFlightBooking={this.handleFlightBooking}
            bookedIds={bookedIds}/>
         </div>
       </div>
