@@ -8,11 +8,21 @@ import './leftPanel.css';
 
 class LeftPanel extends Component {
 
+  constructor(props) {
+    super(props);
+    /*
+    this.state = {
+      value: 0
+    }*/
+  }
+
+
 
   render() {
 
-    console.log(this.props.state);
-    const {price:{min,max,value}}=this.props.state;
+    console.log("ststae",this.props.state);
+    const {price: {min, max, value}} = this.props.state;
+    const {actions: {handleRangeChange,search}} = this.props;
 
     return (
         <div className="border">
@@ -37,16 +47,18 @@ class LeftPanel extends Component {
           </div>
           <div>
             price range
-            <PriceRange min={min} max={max} value={value}>
+            <PriceRange min={min} max={max} value={value}
+                        onChange={handleRangeChange}>
             </PriceRange>
-          </div> <div>
-            <Button>
-              Search
-            </Button>
+          </div>
+          <div>
+            <Button onClick={search}>search</Button>
           </div>
         </div>
+
   );
   }
   }
+
 
   export default LeftPanel;
