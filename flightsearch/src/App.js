@@ -2,10 +2,14 @@ import React, {Component} from 'react';
 import './App.css';
 import LeftPanel from './leftPanel/leftPanel.jsx';
 import RightPanel from './rightPanel/rightPanel.jsx';
+import FLIGHTS from './assets/flightData/flight.js';
+
 
 class App extends Component {
   constructor() {
     super();
+    this.filteredFlights=FLIGHTS;
+
     this.state = {
       price: {
         min: 0,
@@ -32,8 +36,15 @@ class App extends Component {
         });
   };
   search = () => {
+this.filteredFlights=this.filteredFlights.filter((val,key)=>{
 
-console.log("state",this.state);
+
+
+
+
+})
+
+
 
   };
 
@@ -47,8 +58,13 @@ console.log("state",this.state);
     return (
       <div className="App">
         <div className="container">
-          <LeftPanel state={this.state} actions={actions}/>
-          <RightPanel bookedFlightIndex={bookedFlightIndex} handleFlightBooking={this.handleFlightBooking} />
+          <LeftPanel
+              state={this.state}
+              actions={actions}/>
+          <RightPanel
+              filteredFlights={this.filteredFlights}
+              bookedFlightIndex={bookedFlightIndex}
+              handleFlightBooking={this.handleFlightBooking} />
         </div>
       </div>
     );
