@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './rightPanel.css';
 import FLIGHTS from '../assets/flightData/flight.js';
-import FlightListing from './flightListing.jsx';
+import FlightListing from '../rightPanel/flightListing.jsx';
 
 class RightPanel extends Component {
   render() {
