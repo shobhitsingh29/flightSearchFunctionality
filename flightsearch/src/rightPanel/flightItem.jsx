@@ -9,7 +9,7 @@ class FlightItem extends Component {
   }
   render() {
 
-  	const {singleFlightData, flightIndex, bookedFlightIndex, handleFlightBooking} = this.props;
+  	const {singleFlightData, flightIndex, bookedFlightIndex, bookedIds, handleFlightBooking} = this.props;
     const {price,
      number,
       from_code,
@@ -49,7 +49,8 @@ class FlightItem extends Component {
           </tr>
           </tbody>
         </table>
-        {flightIndex === bookedFlightIndex ? <Button>Booked</Button>: <Button onClick={handleFlightBooking(flightIndex)}>Book this flight</Button>}
+        {bookedIds ? <Button>Booked</Button>: <Button onClick={handleFlightBooking(flightIndex)}>Book this flight</Button>}
+        
       </div>
     );
   }

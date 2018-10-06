@@ -12,6 +12,7 @@ class App extends Component {
         max: 10000,
         value: '',
       },
+      bookedIds: new Array(4).fill(false),
       bookedFlightIndex: ''
     };
   }
@@ -37,7 +38,8 @@ class App extends Component {
   };
 
   render() {
-    const {bookedFlightIndex} = this.state;
+    const {bookedFlightIndex, bookedIds} = this.state;
+    bookedIds[bookedFlightIndex] = true;
     const actions = {
       handleRangeChange: this.handleRangeChange,
       search: this.search,
@@ -46,7 +48,7 @@ class App extends Component {
       <div className="App">
         <div className="container">
           <LeftPanel state={this.state} actions={actions}/>
-          <RightPanel bookedFlightIndex={bookedFlightIndex} handleFlightBooking={this.handleFlightBooking} />
+          <RightPanel bookedFlightIndex={bookedFlightIndex} handleFlightBooking={this.handleFlightBooking} bookedIds={bookedIds}/>
         </div>
       </div>
     );
