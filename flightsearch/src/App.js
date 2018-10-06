@@ -6,7 +6,13 @@ import RightPanel from './rightPanel/rightPanel.jsx';
 class App extends Component {
   constructor(){
     super();
-    this.state={};
+    this.state={
+      price:{
+        min:0,
+        max:10000,
+        value:''
+      }
+    };
   }
   render() {
     return (

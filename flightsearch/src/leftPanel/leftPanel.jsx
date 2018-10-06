@@ -7,7 +7,13 @@ import PriceRange from '../@components/@priceRange/priceRange';
 import './leftPanel.css';
 
 class LeftPanel extends Component {
+
+
   render() {
+
+    console.log(this.props.state);
+    const {price:{min,max,value}}=this.props.state;
+
     return (
         <div className="border">
           <div>
@@ -15,8 +21,8 @@ class LeftPanel extends Component {
             <Button>Return</Button>
           </div>
           <div>
-            <InputBox placeholder="origin"></InputBox>
-            <InputBox placeholder="destination"></InputBox>
+            <InputBox placeholder="origin" id="origin"></InputBox>
+            <InputBox placeholder="destination" id="destination"></InputBox>
           </div>
           <div>
             origin Date <DatePicker></DatePicker>
@@ -31,7 +37,7 @@ class LeftPanel extends Component {
           </div>
           <div>
             price range
-            <PriceRange min={0}>
+            <PriceRange min={min} max={max} value={value}>
             </PriceRange>
           </div> <div>
             <Button>
