@@ -25,9 +25,7 @@ class LeftPanel extends Component {
     return (
         <div className="border">
           <>
-            <Button>Oneway</Button>
-            <code> </code>
-            <Button>Return</Button>
+            <h3>SEARCH FLIGHTS</h3>
           </>
           <>
             <InputBox onChange={handleOriginChange} placeholder="origin"

@@ -4,6 +4,7 @@
 
 input[type=range] {
   display: block;
+  font-weight: bold;
   width: 100%;
   margin: 2px;
   -webkit-appearance: none;
@@ -36,7 +37,7 @@ input[type=range]::-webkit-slider-thumb {
 output {
   position: absolute;
   left: 4rem;
-  color: #c51a1a;
+  color: #c50903;
 }
 
 input[type=range] + output {
