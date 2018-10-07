@@ -1,4 +1,10 @@
 .border{
+    padding: 20px;
+    min-width: 450px;
     border: 1px solid black;
     min-height: 80vh;
+}
+h4{
+    text-align: left;
+    padding-left: .6rem;
 }

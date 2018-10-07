@@ -1,66 +1,22 @@
-$main-color: #F44336;
-$secondary-color: white;
-$main-color: #333;
-$secondary-color: #2196f3;
-$width: 500px; // Change Me
-
 
 
 .group {
-  width: 100%;
-  height: $width/6;
-  overflow: hidden;
-  position: relative;
-}
-
-label {
-  position: absolute;
-  top: $width/15;
-  color: rgba(white, .5);
-  font: 400 $width/15 Roboto;
-  cursor: text;
-  transition: .25s ease;
-}
-
-input[type="text"] {
   display: block;
-  width: 100%;
-  padding-top: $width/15;
-  border: none;
-  border-radius: 0; // For iOS
-  border-bottom: solid $width/150 rgba(white, .5);
-  color: white;
-  background: $main-color;
-  font-size: $width/15;
-  transition: .3s ease;
-  &:valid {
-    // border-bottom-color: rgba(white, .5);
-    ~label {
-      top: 0;
-      font: 700 $width/25 Roboto;
-      color: rgba(white, .5);
-    }
-  }
-  &:focus {
-    outline: none;
-    // border-bottom-color: $secondary-color;
-    ~label {
-      top: 0;
-      font: 700 $width/25 Roboto;
-      color: $secondary-color;
-    }
+  width: 90%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  margin: 2%;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 
-
-
-  }
-
-  // Stop Chrome's hideous pale yellow background on auto-fill
-
-  &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px $main-color inset;
-    -webkit-text-fill-color: white !important;
-    // border-bottom-color: rgba(white, .5);
-  }
 }
-
-::selection {background: rgba($secondary-color, .3);}

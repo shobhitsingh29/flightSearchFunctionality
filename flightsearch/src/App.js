@@ -15,6 +15,10 @@ class App extends Component {
         max: 10000,
         value: '',
       },
+      origin:'',
+      originDate:'2018-10-18',
+      destination:'',
+      destinationDate:'2018-10-18',
       bookedIds: new Array(4).fill(false),
       bookedFlightIndex: ''
     };
@@ -35,14 +39,42 @@ class App extends Component {
           },
         });
   };
+  handleOriginChange = (event) => {
+    this.setState(
+        {
+          origin:event.target.value
+        });
+  };
+  handleDestinationChange = (event) => {
+    this.setState(
+        {
+          destination:event.target.value
+        });
+  };
+  handleOriginDateChange = (event) => {
+    this.setState(
+        {
+          originDate:event.target.value
+        });
+  };
+  handleDestinationDateChange = (event) => {
+    this.setState(
+        {
+          destinationDate:event.target.value
+        });
+  };
   search = () => {
 
 
     const flt= FLIGHTS.filter((val, key) => {
 
+      if(val.price<this.state.price.value &&
+          (this.state.origin  && this.state.origin.toUpperCase()===val.from) &&
+          (this.state.originDate  && this.state.originDate===val.depart_date) &&
+          (this.state.destination  && this.state.destination.toUpperCase()===val.to) &&
+          (this.state.destinationDate  && this.state.destinationDate===val.arrive_date)
 
-
-      if(val.price<this.state.price.value){
+      ){
 
 
         return val;
@@ -58,7 +90,7 @@ class App extends Component {
               filteredFlights:flt,
           });
 
-    console.log("filteredFlights1",this.state.filteredFlights)
+    console.log("st",this.state);
     console.log("prc",this.state.price.value)
 
   };
@@ -70,6 +102,10 @@ class App extends Component {
     const actions = {
       handleRangeChange: this.handleRangeChange,
       search: this.search,
+      handleOriginChange: this.handleOriginChange,
+      handleDestinationChange: this.handleDestinationChange,
+      handleOriginDateChange: this.handleOriginDateChange,
+      handleDestinationDateChange: this.handleDestinationDateChange,
     };
 
     return (

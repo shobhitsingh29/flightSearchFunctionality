@@ -5,9 +5,12 @@ class InputBox extends Component {
   render() {
     return (
 
-          <div className="group">
-            <input type="text" id={this.props.id} required="required"/>
-            <label htmlFor={this.props.id}>{this.props.placeholder}</label>
+          <div >
+            <input type="text" className="group"
+                   id={this.props.id}
+                   onChange={this.props.onChange}
+                   placeholder={this.props.placeholder.toUpperCase()+" CITY"}
+                   required="required"/>
         </div>
     );
   }

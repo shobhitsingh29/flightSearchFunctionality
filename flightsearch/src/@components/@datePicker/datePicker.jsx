@@ -4,7 +4,7 @@ import './datePicker.scss';
 class DatePicker extends Component {
   render() {
     return (
-        <input type="date"/>
+        <input type="date" className="group" onChange={this.props.onChange}/>
     );
   }
 }

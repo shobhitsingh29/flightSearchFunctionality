@@ -7,8 +7,8 @@ const FLIGHTS = [{
   "to": "DELHI",
   "from_code": "PNQ",
   "to_code": "DEL",
-  "depart_date": "Tue Apr 18 2017 17:03:07 GMT+0530 (IST)",
-  "arrive_date": "Tue Apr 18 2017 19:03:07 GMT+0530 (IST)",
+  "depart_date": "2018-10-18",
+  "arrive_date": "2018-10-18",
   "price": 2500,
   "return_trip": {
     "airline": "Air India",
@@ -17,8 +17,8 @@ const FLIGHTS = [{
     "to": "PUNE",
     "from_code": "DEL",
     "to_code": "PNQ",
-    "depart_date": "Tue Apr 19 2017 10:03:07 GMT+0530 (IST)",
-    "arrive_date": "Tue Apr 19 2017 12:03:07 GMT+0530 (IST)",
+    "depart_date": "2018-10-19",
+    "arrive_date": "2018-10-19",
     "price": 500
   }
 }, {
@@ -30,8 +30,8 @@ const FLIGHTS = [{
   "to": "DELHI",
   "from_code": "HYD",
   "to_code": "DEL",
-  "depart_date": "Tue Apr 20 2017 15:03:07 GMT+0530 (IST)",
-  "arrive_date": "Tue Apr 20 2017 17:03:07 GMT+0530 (IST)",
+  "depart_date": "2018-10-20",
+  "arrive_date": "2018-10-20",
   "price": 5100,
   "return_trip": {
     "airline": "Indigo",
@@ -40,8 +40,8 @@ const FLIGHTS = [{
     "to": "HYDERABAD",
     "from_code": "DEL",
     "to_code": "HYD",
-    "depart_date": "Tue Apr 21 2017 09:03:07 GMT+0530 (IST)",
-    "arrive_date": "Tue Apr 21 2017 11:03:07 GMT+0530 (IST)",
+    "depart_date": "2018-10-21",
+    "arrive_date": "2018-10-21",
     "price": 1500
   }
 }, {
@@ -53,8 +53,8 @@ const FLIGHTS = [{
   "to": "DELHI",
   "from_code": "PNQ",
   "to_code": "DEL",
-  "depart_date": "Tue Apr 22 2017 17:03:07 GMT+0530 (IST)",
-  "arrive_date": "Tue Apr 22 2017 19:03:07 GMT+0530 (IST)",
+  "depart_date": "2018-10-22",
+  "arrive_date": "2018-10-22",
   "price": 2000,
   "return_trip": {
     "airline": "Air India",
@@ -63,8 +63,8 @@ const FLIGHTS = [{
     "to": "PUNE",
     "from_code": "DEL",
     "to_code": "PNQ",
-    "depart_date": "Tue Apr 24 2017 10:03:07 GMT+0530 (IST)",
-    "arrive_date": "Tue Apr 24 2017 12:03:07 GMT+0530 (IST)",
+    "depart_date": "2018-10-24",
+    "arrive_date": "2018-10-24",
     "price": 500
   }
 }, {
@@ -76,8 +76,8 @@ const FLIGHTS = [{
   "to": "DELHI",
   "from_code": "HYD",
   "to_code": "DEL",
-  "depart_date": "Tue Apr 26 2017 15:03:07 GMT+0530 (IST)",
-  "arrive_date": "Tue Apr 26 2017 17:03:07 GMT+0530 (IST)",
+  "depart_date": "2018-10-18",
+  "arrive_date": "2018-10-18",
   "price": 6000,
   "return_trip": {
     "airline": "Indigo",
@@ -86,8 +86,8 @@ const FLIGHTS = [{
     "to": "HYDERABAD",
     "from_code": "DEL",
     "to_code": "HYD",
-    "depart_date": "Tue Apr 27 2017 09:03:07 GMT+0530 (IST)",
-    "arrive_date": "Tue Apr 27 2017 11:03:07 GMT+0530 (IST)",
+    "depart_date": "2018-10-18",
+    "arrive_date": "2018-10-18",
     "price": 1500
   }
 }];
