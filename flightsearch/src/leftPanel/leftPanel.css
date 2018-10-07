@@ -1,10 +1,27 @@
-.border{
+.border {
     padding: 20px;
     min-width: 450px;
     border: 1px solid black;
     min-height: 80vh;
 }
-h4{
+
+h4 {
     text-align: left;
     padding-left: .6rem;
+}
+.count{
+    color:red;
+}
+
+.marginBottomTop{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.marginSearch{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.inlineDiv{
+    display: inline-flex;
+    margin-right: 3rem;
 }

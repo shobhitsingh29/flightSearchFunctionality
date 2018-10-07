@@ -9,12 +9,12 @@ class FlightListing extends Component {
     const {FLIGHTS, bookedFlightIndex, bookedIds, handleFlightBooking} = this.props;
     return (
         <div className="flightListContainer">
-        {FLIGHTS.map((value, index) => {
-           return <FlightItem singleFlightData={value} key={index} flightIndex={index} 
-           bookedFlightIndex={bookedFlightIndex} 
-           bookedIds={bookedIds[index]} 
+        { FLIGHTS.length>0 ? FLIGHTS.map((value, index) => {
+           return <FlightItem singleFlightData={value} key={index} flightIndex={index}
+           bookedFlightIndex={bookedFlightIndex}
+           bookedIds={bookedIds[index]}
            handleFlightBooking={handleFlightBooking}/>
-        })}
+        }): <h2>No Flights Found</h2> }
         </div>
     );
   }

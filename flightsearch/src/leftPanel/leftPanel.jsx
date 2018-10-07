@@ -10,13 +10,23 @@ class LeftPanel extends Component {
 
   render() {
 
-    const {price: {min, max, value}} = this.props.state;
-    const {actions: {handleRangeChange, search, handleOriginChange, handleDestinationChange, handleOriginDateChange, handleDestinationDateChange}} = this.props;
+    const {price: {min, max, value},count} = this.props.state;
+    const {actions:
+        {handleRangeChange,
+          search,
+          handleOriginChange,
+          handleDestinationChange,
+          handleOriginDateChange,
+          handleDestinationDateChange,
+          handlePassengerCountInc,
+          handlePassengerCountDec,
+    }} = this.props;
 
     return (
         <div className="border">
           <>
             <Button>Oneway</Button>
+            <code> </code>
             <Button>Return</Button>
           </>
           <>
@@ -29,25 +39,31 @@ class LeftPanel extends Component {
             <h4> ORIGIN DATE</h4>
 
             <DatePicker
-              onChange={handleOriginDateChange}></DatePicker>
+                onChange={handleOriginDateChange}></DatePicker>
             <h4>DESTINATION DATE </h4>
-              <DatePicker
-              onChange={handleDestinationDateChange}></DatePicker>
+            <DatePicker
+                onChange={handleDestinationDateChange}></DatePicker>
           </>
           <>
-            passenger
-            <div>
-              <Button>+</Button>
-              <Button>-</Button>
+            <div  className="marginBottomTop">
+            <b className="count">{count} </b>
+            <b>PASSENGER</b>
+            </div>
+            <div className="marginBottomTop">
+              <Button onClick={handlePassengerCountInc}>+</Button>
+              <code> </code>
+              <Button  onClick={handlePassengerCountDec}>-</Button>
             </div>
           </>
-          <>
-            price range
+          <div className="inlineDiv">
+            <b>PRICE RANGE<code>     </code>{min}</b>
+
             <PriceRange min={min} max={max} value={value}
                         onChange={handleRangeChange}>
             </PriceRange>
-          </>
-          <div>
+            <b>{max}</b>
+          </div>
+          <div className="marginSearch">
             <Button onClick={search}>search</Button>
           </div>
         </div>
